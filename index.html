@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#fff7fb" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Little Encounters" />
+  <title>Little Encounters</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="topbar">
+      <div>
+        <p class="tiny-label">little encounters ✿</p>
+        <h1>Run-In Counter</h1>
+      </div>
+      <div class="sparkle-pill" aria-hidden="true">♡ ✦</div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-decor decor-one">✿</div>
+      <div class="hero-decor decor-two">♡</div>
+      <p class="eyebrow" id="monthLabel">This month</p>
+
+      <div class="count-wrap">
+        <span id="monthCount" class="big-count">0</span>
+        <div class="count-copy">
+          <span>run-ins</span>
+          <small id="miniMessage">waiting for a sighting...</small>
+        </div>
+      </div>
+
+      <button id="addBtn" class="primary-btn">
+        <span class="btn-icon">✦</span>
+        I ran into them!
+        <span class="btn-icon">✦</span>
+      </button>
+
+      <button id="undoBtn" class="secondary-btn" disabled>undo last tap</button>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <div class="stat-icon">☀︎</div>
+        <div>
+          <span class="card-label">Today</span>
+          <strong id="todayCount">0</strong>
+        </div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon">∞</div>
+        <div>
+          <span class="card-label">All time</span>
+          <strong id="lifetimeCount">0</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-title-row">
+        <div>
+          <p class="tiny-label">month by month</p>
+          <h2>History ✿</h2>
+        </div>
+        <span class="soft-chip">saved forever-ish</span>
+      </div>
+      <div id="monthHistory" class="month-grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title-row">
+        <div>
+          <p class="tiny-label">recent sightings</p>
+          <h2>Latest ♡</h2>
+        </div>
+      </div>
+      <div id="recentHistory" class="recent-list"></div>
+    </section>
+
+    <div class="footer-note">
+      <span>✦</span>
+      <p id="status" aria-live="polite">Tap whenever you run into them.</p>
+      <span>✦</span>
+    </div>
+  </main>
+
+  <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>

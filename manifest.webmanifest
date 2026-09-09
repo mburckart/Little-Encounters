@@ -1,0 +1,17 @@
+{
+  "name": "Little Encounters",
+  "short_name": "Encounters",
+  "description": "A cute little counter for unexpected run-ins.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff9fc",
+  "theme_color": "#fff7fb",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
